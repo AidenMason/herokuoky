@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: four
+  name: five
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: four
+      app: five
   template:
     metadata:
       labels:
-        app: four
+        app: five
     spec:
       containers:
-      - image: okteto.dev/four:latest
-        name: four
+      - image: okteto.dev/five:latest
+        name: five
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: ProxySite
           value: "icook.tw"
         - name: Vless_UUID
-          value: "9b40171a-8614-466e-8708-bd0b14743286"
+          value: "3bdb4bd7-b20d-46e8-8e73-098271b35bf6"
         - name: Vless_Path
-          value: "/0y19d3ece74a"
+          value: "/00859aa97a05"
         - name: Vmess_UUID
-          value: "9b40171a-8614-466e-8708-bd0b14743286"
+          value: "3bdb4bd7-b20d-46e8-8e73-098271b35bf6"
         - name: Vmess_Path
-          value: "/6b74a1c936dd"
+          value: "/f9499328b58f"
         - name: Share_Path
           value: "/share233"
